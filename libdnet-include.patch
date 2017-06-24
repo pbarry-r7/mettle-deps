@@ -1,0 +1,22 @@
+--- libdnet/include/Makefile.am	2015-05-12 07:41:49.000000000 -0500
++++ libdnet.new/include/Makefile.am	2017-06-23 17:38:07.000000000 -0500
+@@ -2,7 +2,7 @@
+ 
+ include $(top_srcdir)/Makefile.am.common
+ 
+-include_HEADERS = dnet.h
++include_HEADERS = dnet.h queue.h
+ 
+ SUBDIRS = dnet
+ 
+--- libdnet/include/Makefile.in	2017-01-16 17:41:06.000000000 -0600
++++ libdnet.new/include/Makefile.in	2017-06-23 17:41:19.000000000 -0500
+@@ -342,7 +342,7 @@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = foreign no-dependencies
+ AM_CPPFLAGS = -I$(top_srcdir)/include
+-include_HEADERS = dnet.h
++include_HEADERS = dnet.h queue.h
+ SUBDIRS = dnet
+ EXTRA_DIST = err.h queue.h
+ all: config.h
